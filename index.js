@@ -248,6 +248,8 @@ app.post('/login/', mimeParser.none(), async (req,res) =>{  //identificacion de 
     
     res.status(200).send('Ok');
   
+   } else {
+     res.status(400).send('No valid user')
    }
   } catch (err) {
     res.status(400).send(err);
